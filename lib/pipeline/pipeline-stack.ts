@@ -18,7 +18,7 @@ export class PipelineStack extends cdk.Stack {
     );
     // 파이프라인 생성
     const pipeline = new pipelines.CodePipeline(this, "Pipeline", {
-      pipelineName: "Serverless-Pipeline",
+      pipelineName: "CP-EU1-AICS-CDK",
       synth: new pipelines.ShellStep("Synth", {
         input: githubSource,        
         commands: ["npm ci", "npm run build", "npx cdk synth"],
